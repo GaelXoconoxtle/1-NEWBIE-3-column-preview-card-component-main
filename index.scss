@@ -1,0 +1,152 @@
+:root{
+  //Primary
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  //Neutral
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+}
+
+body{
+  background-color: var(--very-light-gray);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .card{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(165, 165, 165);
+    width: 90%;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 600px;
+
+    img{
+      width: 58px;
+      margin-bottom: 40px;
+    }
+
+    .title{
+      color: var(--very-light-gray);
+      font-family: 'Big Shoulders Display', cursive;
+      text-transform: uppercase;
+      font-size: 36px;
+      margin-bottom: 38px;
+    }
+
+    p{
+      width: 100%;
+      color: var(--transparent-white);
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+
+    button{
+      border: 2px solid transparent;
+      padding: 12px 26px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+
+    .sedans{
+      background-color: var(--bright-orange);
+      padding: 50px;
+
+      button{
+        color: var(--bright-orange);
+      }
+    }
+
+    .suvs{
+      background-color: var(--dark-cyan);
+      padding: 50px;
+
+      button{
+        color: var(--dark-cyan);
+      }
+    }
+
+    .luxury{
+      background-color: var(--very-dark-cyan);
+      padding: 50px;
+
+      button{
+        color: var(--very-dark-cyan);
+      }
+    }
+  }
+}
+
+.attribution{
+  font-size: 11px; text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+  margin-top: 40px;
+}
+
+// Media Queries //
+@media(min-width: 1440px){
+  .container{
+    height: 100vh;
+
+    .card{
+      margin-top: 0;
+      flex-direction: row;
+      max-width: 920px;
+
+      img{
+        width: 62px;
+      }
+
+      p{
+        margin-bottom: 100px;
+      }
+    }
+  }
+}
+
+//Active States//
+.card{
+  .sedans{
+    button:hover{
+      background-color: var(--bright-orange);
+      border: 2px solid var(--very-light-gray);
+      color: var(--very-light-gray);
+    }
+  }
+
+  .suvs{
+    button:hover{
+      background-color: var(--dark-cyan);
+      border: 2px solid var(--very-light-gray);
+      color: var(--very-light-gray);
+    }
+  }
+
+  .luxury{
+    button:hover{
+      background-color: var(--very-dark-cyan);
+      border: 2px solid var(--very-light-gray);
+      color: var(--very-light-gray);
+    }
+  }
+}
